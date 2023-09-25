@@ -1,0 +1,44 @@
+*,
+*::before
+*::after{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Chernobyl";
+    src: url("Fonts/Chernobyl.woff") format("woff"),
+        url("Fonts/Chernobyl.woff2") format("woff2"),
+        url("Fonts/Chernobyl.otf") format("otf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Raleway&display=swap');
+
+body{
+    background-image: url(img/homepage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.accueil{
+}
+
+.TXTaccueil{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 40%;
+    color: white;
+    margin-left: 10%;
+    margin-top: 5%;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1{
+    font-family: 'Chernobyl',sans-serif;
+    font-size: 110px;
+}
+
+
+.red{
+    color: #E30000;
+}
