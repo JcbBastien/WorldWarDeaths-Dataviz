@@ -6,31 +6,51 @@
 
 @font-face {
     font-family: "Chernobyl";
-    src: url("Fonts/Chernobyl.woff") format("woff"),
-        url("Fonts/Chernobyl.woff2") format("woff2"),
-        url("Fonts/Chernobyl.otf") format("otf");
+    src:url("Fonts/Chernobyl.woff2") format("woff2"), 
+        url("Fonts/Chernobyl.woff") format("woff"),
+        url("Fonts/Chernobyl.otf") format("opentype");
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Raleway&display=swap');
 
 body{
-    background-image: url(img/homepage.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    margin: 0;
 }
 
 .accueil{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    font-family: 'Raleway', sans-serif;
+    background-image: url(img/homepage.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+a{
+    outline: none;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+
 }
 
 .TXTaccueil{
     display: flex;
-    align-items: flex-end;
     flex-direction: column;
     width: 40%;
     color: white;
     margin-left: 10%;
     margin-top: 5%;
-    font-family: 'Raleway', sans-serif;
 }
 
 h1{
@@ -38,6 +58,9 @@ h1{
     font-size: 110px;
 }
 
+.feu{
+    height: 87px;
+}
 
 .red{
     color: #E30000;
