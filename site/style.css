@@ -15,24 +15,26 @@
 
 body{
     margin: 0;
+    color: white;
+    font-family: 'Raleway', sans-serif;
 }
 
+p{
+    font-size: 1.2em;
+}
 
 .accueil{
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    font-family: 'Raleway', sans-serif;
-    background-image: url(img/homepage-lumin.jpg);
+    align-items: center;
+    justify-content: center;
+    background-image: url(img/homepage.jpg);
     background-size: cover;
     height: 100vh;
 }
 /* NAVBARE */
 .navbar{
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    font-weight: lighter;
+    font-weight: 300;
     font-size: 1.563em;
     margin-top: 50px;
 }
@@ -65,11 +67,7 @@ a{
 
 .TXTaccueil{
     display: flex;
-    flex-direction: column;
-    width: 40%;
     color: white;
-    margin-left: 10%;
-    margin-top: 5%;
 }
 
 h1{
@@ -77,13 +75,62 @@ h1{
     font-size: 6.5em;
 }
 
-.feu{
-    height: 87px;
-}
-
 .red{
     color: #E30000;
 }
+
+/* BUTTON */
+
+button{
+    background: rgba(0, 0, 0, 0);
+    border-radius: 15px;
+    color: white;
+    border: white 1px solid;
+    width: 200px;
+    height: 50px;
+}
+
+
+/* 2EME PAGE WW1 */
+
+.WW1{
+    background-image: url(img/WW1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.TXTWW1{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* 3eme page WW2 */
+
+.WW2{
+    background-image: url(img/WW2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.TXTWW2{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 100px;
+}
+
+
+
 
 
 /* CARTE ET BUREAU  */
