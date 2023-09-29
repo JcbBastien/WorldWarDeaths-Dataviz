@@ -23,44 +23,23 @@ p{
     font-size: 1.2em;
 }
 
+h2{
+    font-family: 'Chernobyl',sans-serif;
+    font-size: 6em;
+}
+
+h3{
+    font-family: 'Chernobyl',sans-serif;
+    font-size: 3.5em;
+}
+
 .accueil{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(img/homepage.jpg);
+    background-image: linear-gradient(0deg, rgba(25,28,27,1) 5%, rgba(0,0,0,0) 100%), url(img/homepage2.jpg);
     background-size: cover;
     height: 100vh;
-}
-/* NAVBARE */
-.navbar{
-    display: flex;
-    font-weight: 300;
-    font-size: 1.563em;
-    margin-top: 50px;
-}
-
-a{
-    outline: none;
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-
-}
-/* Votre CSS existant */
-
-/* Ajoutez le CSS pour l'effet de survol */
-.lien {
-    text-decoration: none;
-    color: white;
-    font-weight: normal;
-    position: relative;
-    display: inline-block;
-    transition: all 0.3s ease;
-}
-
-.lien:hover {
-    font-weight: bold;
-    transform: translateX(-35px);
 }
 
 /* ACCUEIL */
@@ -94,7 +73,7 @@ button{
 /* 2EME PAGE WW1 */
 
 .WW1{
-    background-image: url(img/WW1.jpg);
+    background-image:linear-gradient(0deg, rgba(25,28,27,1) 2%, rgba(0,0,0,0) 50%, rgba(25,28,27,1) 98%), url(img/WW1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 110vh;
@@ -113,7 +92,7 @@ button{
 /* 3eme page WW2 */
 
 .WW2{
-    background-image: url(img/WW2.jpg);
+    background-image: linear-gradient(0deg, rgba(25,28,27,1) 1%, rgba(0,0,0,0) 50%, rgba(25,28,27,1) 99%), url(img/WW22.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -130,15 +109,11 @@ button{
 }
 
 
-
-
-
 /* CARTE ET BUREAU  */
-.bureau{
+.Fondcarte{
     display: flex;
     justify-content: center;
-    background-image: url(img/bureau.jpg);
-    background-repeat: no-repeat;
+    background-image: url(img/Fondcarte.jpg);
     background-position: center ;
     height: 100vh;
 }
@@ -151,4 +126,22 @@ button{
 
 .carte{
     width: 85%;
+}
+
+
+/* Legislation */
+
+.legislation{
+    display: flex;
+    background-image: url(img/legislation.jpg);
+    background-position: center ;
+    height: 100vh;
+}
+.TXTlegislation{
+    margin-left: 100px;
+    margin-top: 100px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
