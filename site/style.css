@@ -17,6 +17,7 @@ body{
     margin: 0;
     color: white;
     font-family: 'Raleway', sans-serif;
+    font-weight: 100;
 }
 
 p{
@@ -26,6 +27,7 @@ p{
 h2{
     font-family: 'Chernobyl',sans-serif;
     font-size: 6em;
+    margin-bottom: 20px;
 }
 
 h3{
@@ -106,6 +108,7 @@ button{
     flex-direction: column;
     align-items: flex-start;
     margin-left: 100px;
+    margin-bottom: 100px;
 }
 
 
@@ -113,19 +116,29 @@ button{
 .Fondcarte{
     display: flex;
     justify-content: center;
-    background-image: url(img/Fondcarte.jpg);
+    background-image: linear-gradient(0deg, rgba(25,28,27,1) 2%, rgba(0,0,0,0) 50%, rgba(25,28,27,1) 99%), url(img/Fondcarte.jpg);
     background-position: center ;
     height: 100vh;
 }
 
-.map{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.carte{
+    background-image: url(img/carte.png);
+    width: 70%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 100px;
+    opacity: 0.7;
 }
 
-.carte{
-    width: 85%;
+svg{
+    width: 70%;
+    opacity: 1;
+    margin-left: 200px;
+    margin-bottom: 100px;
+    }
+
+path:hover{
+    fill: #944141;
 }
 
 
@@ -133,7 +146,7 @@ button{
 
 .legislation{
     display: flex;
-    background-image: url(img/legislation.jpg);
+    background-image:linear-gradient(0deg, rgba(25,28,27,1) 2%, rgba(0,0,0,0) 50%, rgba(25,28,27,1) 98%), url(img/legislation.jpg);
     background-position: center ;
     height: 100vh;
 }
