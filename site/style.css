@@ -17,7 +17,7 @@ body{
     margin: 0;
     color: white;
     font-family: 'Raleway', sans-serif;
-    font-weight: 100;
+    font-weight: 400;
 }
 
 p{
@@ -26,8 +26,8 @@ p{
 
 h2{
     font-family: 'Chernobyl',sans-serif;
-    font-size: 6em;
-    margin-bottom: 20px;
+    font-size: 4em;
+    margin-bottom: 40px;
 }
 
 h3{
@@ -49,32 +49,56 @@ h3{
 .TXTaccueil{
     display: flex;
     color: white;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1{
     font-family: 'Chernobyl',sans-serif;
     font-size: 6.5em;
+    margin-bottom: 24px;
 }
 
 .red{
     color: #E30000;
 }
 
+.accroche{
+    font-size: 15px;
+}
+
+.BUTaccueil{
+    display: flex;
+}
+
+
 /* BUTTON */
 
-button{
+a{
+    margin-top: 40px;
     background: rgba(0, 0, 0, 0);
     border-radius: 15px;
     color: white;
+    font-size: 0.8em;
     border: white 1px solid;
-    width: 200px;
-    height: 50px;
+    width: 150px;
+    height: 40px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    transition: transform 0.3s ease;
 }
+
+a:hover {
+    transform: scale(1.2); /* Grossit le bouton de 10% au survol */
+}
+
 
 
 /* 2EME PAGE WW1 */
 
-.WW1{
+#WW1{
     background-image:linear-gradient(0deg, rgba(25,28,27,1) 2%, rgba(0,0,0,0) 50%, rgba(25,28,27,1) 98%), url(img/WW1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -86,14 +110,13 @@ button{
 
 .TXTWW1{
     width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    margin: 0 80px 80px 0;
+
 }
 
 /* 3eme page WW2 */
 
-.WW2{
+#WW2{
     background-image: linear-gradient(0deg, rgba(25,28,27,1) 1%, rgba(0,0,0,0) 50%, rgba(25,28,27,1) 99%), url(img/WW22.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -104,11 +127,8 @@ button{
 
 .TXTWW2{
     width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     margin-left: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 }
 
 
@@ -121,24 +141,24 @@ button{
     height: 100vh;
 }
 
-.carte{
+#carte{
     background-image: url(img/carte.png);
     width: 70%;
     background-repeat: no-repeat;
     background-size: contain;
     margin-top: 100px;
-    opacity: 0.7;
 }
 
 svg{
     width: 70%;
-    opacity: 1;
     margin-left: 200px;
-    margin-bottom: 100px;
+    margin-top: -15px;
     }
 
 path:hover{
     fill: #944141;
+    stroke: white;
+    stroke-width: 2.5px;
 }
 
 
