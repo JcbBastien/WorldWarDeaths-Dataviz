@@ -5,10 +5,8 @@
 }
 
 @font-face {
-    font-family: "Chernobyl";
-    src:url("Fonts/Chernobyl.woff2") format("woff2"), 
-        url("Fonts/Chernobyl.woff") format("woff"),
-        url("Fonts/Chernobyl.otf") format("opentype");
+    font-family: "grunge";
+    src: url("Fonts/WarEliteGrunge.ttf");
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Raleway&display=swap');
@@ -25,13 +23,13 @@ p{
 }
 
 h2{
-    font-family: 'Chernobyl';
+    font-family: 'grunge';
     font-size: 4em;
     margin-bottom: 40px;
 }
 
 h3{
-    font-family: 'Chernobyl',sans-serif;
+    font-family: 'grunge',sans-serif;
     font-size: 3.5em;
 }
 
@@ -54,7 +52,7 @@ h3{
 }
 
 h1{
-    font-family: 'Chernobyl',sans-serif;
+    font-family: 'grunge',sans-serif;
     font-size: 6.5em;
     margin-bottom: 24px;
 }
