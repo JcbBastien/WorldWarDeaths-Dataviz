@@ -10,6 +10,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 body{
     margin: 0;
@@ -26,11 +27,6 @@ h2{
     font-family: 'grunge';
     font-size: 4em;
     margin-bottom: 40px;
-}
-
-h3{
-    font-family: 'grunge',sans-serif;
-    font-size: 3.5em;
 }
 
 .accueil{
@@ -157,6 +153,50 @@ path:hover{
     fill: #944141;
     stroke: white;
     stroke-width: 2.5px;
+}
+
+
+
+/*BILAN */
+
+#bilan{
+    background-image: linear-gradient(0deg, rgba(25,28,27,1) 1%, rgba(0,0,0,0) 50%, rgba(25,28,27,1) 99%), url(img/bilan.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.txtbilan{
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.compteur{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -150px;
+}
+
+h3{
+    font-family: 'grunge',sans-serif;
+    font-size: 3.5em;
+    color: red;
+}
+
+.white{
+    color: white;
+}
+
+
+h4{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 9em;
+    color: #9E0505;
+    margin-bottom: 40px;
 }
 
 
