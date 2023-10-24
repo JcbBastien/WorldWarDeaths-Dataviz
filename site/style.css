@@ -9,6 +9,12 @@
     src: url("Fonts/WarEliteGrunge.ttf");
 }
 
+@font-face {
+    font-family: "bobbinsbold";
+    src: url("Fonts/Bobbin-BoldCyrillic.woff");
+    src: url("Fonts/Bobbin-BoldCyrillic.woff2")
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
@@ -24,14 +30,13 @@ p{
 }
 
 h2{
-    font-family: 'grunge';
-    font-size: 4em;
+    font-family: 'bobbinsbold';
+    font-size: 5.5em;
     margin-bottom: 40px;
 }
 
 .accueil{
     display: flex;
-    align-items: center;
     justify-content: center;
     background-image: linear-gradient(0deg, rgba(25,28,27,1) 5%, rgba(0,0,0,0) 100%), url(img/homepage.jpg);
     background-size: cover;
@@ -41,30 +46,24 @@ h2{
 /* ACCUEIL */
 
 .TXTaccueil{
-    display: flex;
-    color: white;
-    flex-direction: column;
-    align-items: center;
+    color: #4F4C4B;
 }
 
 h1{
-    font-family: 'grunge',sans-serif;
-    font-size: 6.5em;
-    margin-bottom: 24px;
+    font-family: 'bobbinsbold',sans-serif;
+    font-size: 13em;
+    margin-top: 50px;
 }
 
 .red{
-    color: #E30000;
+    color: #975D60;
 }
 
-.accroche{
-    font-size: 15px;
-}
+.perso{
+    position: absolute;
+    width: 100%;
 
-.BUTaccueil{
-    display: flex;
 }
-
 
 /* BUTTON */
 
@@ -183,7 +182,7 @@ path:hover{
 h3{
     font-family: 'grunge',sans-serif;
     font-size: 3.5em;
-    color: red;
+    color: #9E0505;
 }
 
 .white{
