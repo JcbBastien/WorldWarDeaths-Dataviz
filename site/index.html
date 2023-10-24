@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DATAVIZ</title>
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="script.js" defer></script>    
 </head>
 <body>
     <section class="accueil">
@@ -39,10 +40,13 @@
             <h3>Bilan <br> <span class="white"> World War </span> </h3>
         </div>
         <div class="compteur">
-            
-            <h4>85 000 000</h4>
-            <p>Please estimate the number of deaths you think occurred during World War I.</p>
-            <a href="#carte" > SEE MORE</a>
+            <form>
+                <label id="trucDrole"></label>
+                <input type="number" name="numberJusteMort" id="numberJusteMort" step="1" required autocomplete="off">
+                <p id="formTXT">Please estimate the number of deaths you think occurred during World War I.</p>
+                <input type="submit" id="JustePrixSubmit" value="CHECK">
+            </form>
+            <a href="#carte" id="SeeMore" > SEE MORE</a>
 
         </div>
 
