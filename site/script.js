@@ -7,7 +7,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
 
     //Valeurs changeable
     let rep = 85000000;
-    let transitionSec = 3;
+    let transitionSec = 2;
 
     //Valeurs d'entrée
     let inputNumber = event.target.childNodes[3].valueAsNumber;
@@ -52,7 +52,7 @@ let zoom=false
         // Affiche "Bonjour" dans la console
         console.log(this.getBoundingClientRect());
         box=this.getBoundingClientRect();
-        d3.select("svg").transition().attr("viewBox", `${box.x} ${box.y} ${box.width} ${box.height}`)
+        d3.select("svg").transition().attr("viewBox", `${box.x+10} ${box.y} ${box.width} ${box.height}`)
 });
 
 d3.select("svg")

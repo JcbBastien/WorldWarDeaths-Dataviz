@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: "grunge";
     src: url("Fonts/WarEliteGrunge.ttf");
@@ -17,6 +21,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Raleway:wght@700&display=swap');
+
 
 body{
     margin: 0;
@@ -145,6 +151,7 @@ svg{
     width: 70%;
     margin-left: 200px;
     margin-top: -15px;
+    overflow:visible ;
     }
 
 path:hover{
@@ -178,8 +185,8 @@ path:hover{
 }
 
 h3{
-    font-family: 'grunge',sans-serif;
-    font-size: 3.5em;
+    font-family: 'bobbinsbold',sans-serif;
+    font-size: 4em;
     color: #9E0505;
 }
 
@@ -213,11 +220,9 @@ input{
     border: none;
     outline: none;
     background: none;
-    border-bottom: 1px solid #9E0505 ;
+    border-bottom: 3px solid #9E0505 ;
     color: #9E0505;
     font-size: 20px;
-    font-weight: 400;
-
 }
 
 #JustePrixSubmit{
