@@ -1,5 +1,5 @@
 // Récupère les données dans le tableau de données
-  const response = await fetch("http://localhost:5500/data.json")
+  const response = await fetch("http://localhost:5500/site/data.json")
   const jsonData = await response.json();
 
 document.getElementById('SeeMore').style.display = 'none';
@@ -50,9 +50,9 @@ document.querySelector("form").addEventListener("submit", (event) => {
     },100*transitionSec)
 })
 
-const closeModalButtons = document.getElementById('closeModal')
 const modal = document.getElementById('modal')
 
+//Permet d'activer la Popup et de la positionner a l'emplacement cliquer
 function openModal(){
   modal.classList.add('active')
   const x = event.clientX + 10 + 'px';
@@ -64,18 +64,21 @@ function closeModal(){
   modal.classList.remove('active')
 }
 
-closeModalButtons.addEventListener('click', closeModal)
+modal.addEventListener('click', closeModal)
 
 
+//Permet de selectionner les paths et de les associers a la base de donner
 let svg = document.querySelector('svg');
 
 svg.querySelectorAll('path').forEach(path => {
 
   let abr = path.id;
+
+  //Per met de relier la base de donner des id des path aux "abr"
   let countryData = jsonData.WW1.find(d => d.abr === abr);
   
-  // Formatez la valeur `rep` avec des espaces
 
+  // Permet de changer le contenue des divs par rapport a ce rentrer dans la base de donner 
   if(countryData){
     path.addEventListener('click', () => {
         openModal()

@@ -165,8 +165,6 @@ svg{
 
   #modal {
     position: fixed;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
     background-image: url(img/Papier.png);
@@ -176,10 +174,17 @@ svg{
     color: black;
     font-family: 'Bobbinsbold';
     font-size: 1.5rem;
+    text-decoration: none;
+    background-color:rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
   
   #modal.active {
     transform: translate(-50%, -50%) scale(1);
+
   }
   
   #title {
@@ -187,10 +192,6 @@ svg{
     font-weight: bold;
     margin-top: 30px;
     margin-left: 40px;
-  }
-  
-.close-button {
-    cursor: pointer;
   }
 
  #modal-body {
