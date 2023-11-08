@@ -1,3 +1,7 @@
+// Récupère les données dans le tableau de données
+  const response = await fetch("http://localhost:5500/data.json")
+  const jsonData = await response.json();
+
 document.getElementById('SeeMore').style.display = 'none';
 
 //JustePrix morbide
@@ -6,7 +10,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
     event.preventDefault();
 
     //Valeurs changeable
-    let rep = 85000000;
+    let rep = 18591701;
     let transitionSec = 2;
 
     //Valeurs d'entrée
@@ -33,32 +37,41 @@ document.querySelector("form").addEventListener("submit", (event) => {
     setTimeout(function(){
         document.getElementById("trucDrole").innerHTML = rep;
     },100*transitionSec)
-
-    
 })
 
+const closeModalButtons = document.getElementById('closeModal')
+const modal = document.getElementById('modal')
 
+function openModal(){
+  modal.classList.add('active')
+  const x = event.clientX + 10 + 'px';
+  const y = event.clientY - 50 + 'px';
+  modal.style.left = x;
+  modal.style.top = y;
+}
+function closeModal(){
+  modal.classList.remove('active')
+}
 
+closeModalButtons.addEventListener('click', closeModal)
 
-//CARTE
-let zoom=false
+let svg = document.querySelector('svg');
 
+svg.querySelectorAll('path').forEach(path => {
 
-    let paths = d3.selectAll("path"); 
-    paths.on("click", function(e) {
-        if (zoom)return
-        zoom=true
-        e.stopPropagation();
-        // Affiche "Bonjour" dans la console
-        console.log(this.getBoundingClientRect());
-        box=this.getBoundingClientRect();
-        d3.select("svg").transition().attr("viewBox", `${box.x+10} ${box.y} ${box.width} ${box.height}`)
-});
+  let abr = path.id;
+  let countryData = jsonData.WW1.find(d => d.abr === abr);
 
-d3.select("svg")
-    .on("click",function(){
-        if(!zoom)return
-        zoom=false
-        d3.select("svg").transition().attr("viewBox","0 0 949 764")
-    });
+  if(countryData){
+    path.addEventListener('click', () => {
+        openModal()
+        document.querySelector('#title').textContent = countryData.country;
+        document.querySelector('#modal-body').textContent ="NUMBER OF DEATHS : " + countryData.deaths
+   });
+  }else{
+    path.classList.remove("selectablePath")
+    path.classList.add("unselectablePath")
+  }
+  
+ });
 
