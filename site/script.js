@@ -4,6 +4,12 @@
 
 document.getElementById('SeeMore').style.display = 'none';
 
+
+function formatNumberWithSpaces(number) {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+
+
 //JustePrix morbide
 document.querySelector("form").addEventListener("submit", (event) => {
     //Evite de rafraichir la page au submit
@@ -30,11 +36,16 @@ document.querySelector("form").addEventListener("submit", (event) => {
     for(let i=1 ; i<=100 ; i++){
         setTimeout(function(){
             let inputAndDifPercent = inputNumber + numberDif * (i/100);
+            let inputAndDifProcessed = Math.round(inputAndDifPercent)
+            inputAndDifProcessed = formatNumberWithSpaces(inputAndDifProcessed);
 
-            document.getElementById("trucDrole").innerHTML = Math.round(inputAndDifPercent).toString();
+            document.getElementById("trucDrole").innerHTML = inputAndDifProcessed;
         },i*transitionSec);
     };
     setTimeout(function(){
+        // Formatez la valeur `rep` avec des espaces
+        rep = formatNumberWithSpaces(rep);
+
         document.getElementById("trucDrole").innerHTML = rep;
     },100*transitionSec)
 })
@@ -45,7 +56,7 @@ const modal = document.getElementById('modal')
 function openModal(){
   modal.classList.add('active')
   const x = event.clientX + 10 + 'px';
-  const y = event.clientY - 50 + 'px';
+  const y = event.clientY - 60 + 'px';
   modal.style.left = x;
   modal.style.top = y;
 }
@@ -55,23 +66,32 @@ function closeModal(){
 
 closeModalButtons.addEventListener('click', closeModal)
 
+
 let svg = document.querySelector('svg');
 
 svg.querySelectorAll('path').forEach(path => {
 
   let abr = path.id;
   let countryData = jsonData.WW1.find(d => d.abr === abr);
+  
+  // Formatez la valeur `rep` avec des espaces
 
   if(countryData){
     path.addEventListener('click', () => {
         openModal()
         document.querySelector('#title').textContent = countryData.country;
-        document.querySelector('#modal-body').textContent ="NUMBER OF DEATHS : " + countryData.deaths
+        let dataDeathsProcessed = formatNumberWithSpaces(countryData.deaths);
+        document.querySelector('#modal-body').textContent ="NUMBER OF DEATHS : " + dataDeathsProcessed
    });
   }else{
     path.classList.remove("selectablePath")
     path.classList.add("unselectablePath")
   }
+
+  
+  
   
  });
+
+ 
 
