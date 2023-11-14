@@ -261,5 +261,3 @@ sortedWW2.forEach((element, i) => {
     }
     i++;
 });
-
-document.getElementById("loadingGraph").remove()
