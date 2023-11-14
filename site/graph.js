@@ -4,43 +4,34 @@ const jsonData = await response.json()
 
 
 
-// Ajout de scroll horizontal à la souris pour les deux graphiques
-for (let i = 0; i < 2; i++) {
-
-    let graphName = "graph" + (i+1);
-
-    document.getElementById(graphName).addEventListener('wheel', function(event) {
-        var modifier = 1;
-        
-        if (event.deltaMode == event.DOM_DELTA_PIXEL) {
-          modifier = 1;
-        } 
-        else if (event.deltaMode == event.DOM_DELTA_LINE) {
-          modifier = parseInt(getComputedStyle(this).lineHeight);
-        } 
-        else if (event.deltaMode == event.DOM_DELTA_PAGE) {
-          modifier = this.clientHeight;
-        }
-        
-        if(isNaN(modifier)) {
-          modifier = 10;
-        }
-        
-        if (event.deltaY != 0) {
-          this.scrollLeft += modifier * event.deltaY;
-          event.preventDefault();
-        }
-    });
-}
+// Ajout de scroll horizontal à la souris pour le graphique
+document.getElementById("graph1").addEventListener('wheel', function(event) {
+  var modifier = 1;
+  
+  if (event.deltaMode == event.DOM_DELTA_PIXEL) {
+    modifier = 1;
+  } 
+  else if (event.deltaMode == event.DOM_DELTA_LINE) {
+    modifier = parseInt(getComputedStyle(this).lineHeight);
+  } 
+  else if (event.deltaMode == event.DOM_DELTA_PAGE) {
+    modifier = this.clientHeight;
+  }
+  
+  if(isNaN(modifier)) {
+    modifier = 10;
+  }
+  
+  if (event.deltaY != 0) {
+    this.scrollLeft += modifier * event.deltaY;
+    event.preventDefault();
+  }
+});
 
 // Trie par nombre de morts
 const sortedWW1 = jsonData.WW1.sort(function(a,b){
     return b.deaths - a.deaths;
 })
-const sortedWW2 = jsonData.WW2.sort(function(a,b){
-    return b.deaths - a.deaths;
-})
-
 
 
 // SVG military / civilian pour alléger les codes de génération de graphiques
@@ -102,9 +93,11 @@ sortedWW1.forEach((element, i) => {
             <defs>` + civilianVar + militaryVar +`</defs>
         </svg>
 
-        <div class=graphLine></div> 
+        <img src="img/drapeauWW1/`+element.abr+`.png">
+
 
         <h2>` + element.country + `</h2>
+        <p>` + element.deaths + ` morts</p>
     </div>`;
 
       document.getElementById("graph1").innerHTML += WW1GraphTemplate;
@@ -164,85 +157,12 @@ sortedWW1.forEach((element, i) => {
       i++;
 });
 
-sortedWW2.forEach((element, i) => {
-  let WW2GraphTemplate = `
-  <div class="graphContainer">
-      <svg id="graph2` + (i+1) + `Content" width="250" height="400" xmlns="http://www.w3.org/2000/svg">
-          <defs>` + civilianVar + militaryVar +`</defs>
-      </svg>
-
-      <div class=graphLine></div> 
-
-      <h2>` + element.country + `</h2>
-      <p>` + element.deaths + ` morts</p>
-      <p>` + element.civil + ` civil</p>
-      <p>` + element.military + ` militaire</p>
-      <p>` + element.jews + ` juif</p>
-  </div>`;
-
-    document.getElementById("graph2").innerHTML += WW2GraphTemplate;
-
-    let WW2MaxDeath = sortedWW2[0].deaths
-
-    // Pourcentage sur 140 car 140 personnes peut être affiché a la fois.
-    let currentPercentage = Math.round((element.deaths*140)/WW2MaxDeath)
-
-    // Pourcentage de personnes décédées calculé en fonction du pays ayant le plus de morts.
-    // Si le pourcentage de personnes décédées est inférieur à 2, il regarde s'il y a des morts civil et militaire.
-    if(currentPercentage <= 2){
-      if(element.military == 0 || element.civil == 0){
-        // S'il y a que un type de mort, il met le pourcentage à 1 pour afficher qu'un type de personne.
-        currentPercentage = 1
-        // S'il y a des morts civil ET militaire, il met le pourcentage à 2 pour afficher 2 personnes dans le graphique.
-      }else{
-        currentPercentage = 2
-      }
-    }
-
-    let currentCivilPercentage = Math.round((element.civil*currentPercentage)/element.deaths)
-    let currentMilitaryPercentage = currentPercentage - currentCivilPercentage
-    if(currentCivilPercentage == 0){
-      if(element.civil != 0){
-        currentCivilPercentage = 1
-        currentMilitaryPercentage--
-      }
-    }
-    if(currentMilitaryPercentage == 0){
-      if(element.military != 0){
-        currentMilitaryPercentage = 1
-        currentCivilPercentage--
-      }
-    }
-
-    let Xpos = 0
-    let Ypos = 0
-
-    let militaryI = 0
-    let graphPersonnage = "#graphMilitary"
-
-    for(let graphI = 1;graphI <= currentPercentage; graphI++){
-      if(militaryI < currentMilitaryPercentage){
-        militaryI++
-      }else{
-        graphPersonnage = "#graphCivilian"
-      }
-      document.getElementById("graph2" + (i+1) + "Content").innerHTML += `<use xlink:href="` + graphPersonnage + `" x="710" y="1160" width="50px" height="100px" transform="scale(0.3) translate(` + -55*Xpos + `,` + -125*Ypos + `)"/>`
-
-      Xpos++
-      if(Xpos == 14){
-        Xpos = 0
-        Ypos++
-      }
-    }
-    i++;
-});
-
 function formatNumberWithSpaces(number) {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
 
 let eachDeathInfo = formatNumberWithSpaces(Math.round(sortedWW1[0].deaths/140));
 
-document.getElementById("TXTgraph").innerHTML = `Chaque personnage symbolise environ `+ eachDeathInfo +` personnes. Chaque pixel de ce graphique reflète une vie perdue, soulignant ainsi l'ampleur personnelle et humaine de ce conflit historique dévastateur.`
+document.getElementById("TXTgraph").innerHTML = `Chaque personnage symbolise environ `+ eachDeathInfo+` personnes. Chaque pixel de ce graphique reflète une vie perdue, soulignant ainsi l'ampleur personnelle et humaine de ce conflit historique dévastateur.`
 
 

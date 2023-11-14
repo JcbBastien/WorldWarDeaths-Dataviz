@@ -4,9 +4,18 @@
     box-sizing: border-box;
 }
 
-html{
+html {
+    height: 100%;
+    margin: 0;
     scroll-behavior: smooth;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    -ms-scroll-snap-type: y mandatory;
+    -webkit-scroll-snap-type: y mandatory;
+    -o-scroll-snap-type: y mandatory;
+    -moz-scroll-snap-type: y mandatory;
 }
+
 
 @font-face {
     font-family: "grunge";
@@ -39,12 +48,16 @@ h2{
     margin-bottom: 40px;
 }
 
-.accueil{
+#accueil{
     display: flex;
     justify-content: center;
     background-image: linear-gradient(0deg, rgba(25,28,27,1) 5%, rgba(0,0,0,0) 100%), url(img/homepage.jpg);
     background-size: cover;
     height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    -moz-scroll-snap-align: start;
+    -moz-scroll-snap-stop: always;
 }
 
 /* ACCUEIL */
@@ -102,6 +115,10 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    -moz-scroll-snap-align: start;
+    -moz-scroll-snap-stop: always;
 }
 
 .TXTWW1{
@@ -119,6 +136,10 @@ a:hover {
     height: 100vh;
     display: flex;
     align-items: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    -moz-scroll-snap-align: start;
+    -moz-scroll-snap-stop: always;
 }
 
 .TXTWW2{
@@ -135,6 +156,10 @@ a:hover {
     background-image: linear-gradient(0deg, rgba(25,28,27,1) 1%, rgba(0,0,0,0) 50%, rgba(25,28,27,1) 99%), url(img/Fondcarte1.jpg);
     background-position: center ;
     height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    -moz-scroll-snap-align: start;
+    -moz-scroll-snap-stop: always;
 }
 
 #carte{
@@ -206,6 +231,10 @@ a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    -moz-scroll-snap-align: start;
+    -moz-scroll-snap-stop: always;
 }
 
 .txtbilan{
@@ -213,6 +242,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    margin-bottom: 150px;
 }
 
 .bilanBarre{
@@ -324,10 +354,20 @@ input::-o-outer-spin-button {
     display: flex;
     justify-content: center;
     flex-direction: column;
-
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    -moz-scroll-snap-align: start;
+    -moz-scroll-snap-stop: always;scroll-snap-align: start;
+    scroll-snap-stop: always;
+    -moz-scroll-snap-align: start;
+    -moz-scroll-snap-stop: always;
 }
 
 /*TEXTE du graphique */
+
+#graph1{
+    transform: scale(0.90);
+}
 
 .txtGraphique{
     display: flex;
@@ -354,11 +394,9 @@ input::-o-outer-spin-button {
 }
 
 #graphique p {
-    margin-bottom: 50px;
+    margin-bottom: 35px;
     margin-top: 0;
 }
-
-
 
 .graph{
     display: flex;
@@ -377,12 +415,7 @@ input::-o-outer-spin-button {
 .graphCenter{
     display: flex;
     justify-content: center;
-}
-
-.graphLine{
-    height: 2px;
-    width: 150px;
-    background-color: black;
+    margin-top: -60px;
 }
 
 .graphCivilianColor{
@@ -400,10 +433,14 @@ input::-o-outer-spin-button {
     background-image:linear-gradient(0deg, rgba(25,28,27,1) 2%, rgba(0,0,0,0) 50%, rgba(25,28,27,1) 98%), url(img/legislation.jpg);
     background-position: center ;
     height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    -moz-scroll-snap-align: start;
+    -moz-scroll-snap-stop: always;
 }
 .TXTlegislation{
     margin-left: 100px;
-    margin-top: 100px;
+    margin-top: 150px;
     width: 60%;
     display: flex;
     flex-direction: column;
