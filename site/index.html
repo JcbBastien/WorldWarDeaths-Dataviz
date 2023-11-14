@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,32 +22,36 @@
     <section id="WW1">
         <div class="TXTWW1">
             <h2> ABOUT <span class="red"> WWI</span></h2>
-            <p>Welcome to our website dedicated to the history of World War I. Here, we invite you to explore the poignant figures that reflect the magnitude of this devastating war. Dive into the tragic statistics to better understand the heavy human toll paid during this global conflict, as millions of lives were sacrificed for a world in search of peace.</p>
-            <a href="#bilan" > SEE THE BILAN</a>
+            <p>Bienvenue sur notre site dédié à l’histoire de la Première Guerre mondiale. Ici, nous vous invitons à explorer les chiffres poignants qui reflètent l’ampleur de cette guerre dévastatrice. Plongez dans les statistiques tragiques pour mieux comprendre le lourd tribut humain payé pendant ce conflit mondial, alors que des millions de vies ont été sacrifiées pour un monde en quête de paix.            </p>
+            <a href="#bilan" > VOIR LE BILAN</a>
         </div>
     </section>
 
     <section id="WW2">
         <div class="TXTWW2">
             <h2> ABOUT <span class="red"> WWII</span> </h2>
-            <p>Welcome to our website dedicated to the history of World War II. Here, we invite you to explore the poignant figures that reflect the magnitude of this devastating war. Dive into the tragic statistics to better understand the heavy human toll paid during this global conflict, as millions of lives were sacrificed for a world in search of peace.</p>
-            <a href="#bilan" > SEE THE BILAN</a>
+            <p>Ici, nous vous invitons à explorer les chiffres poignants de la seconde guerre mondiale qui reflètent l’ampleur de cette guerre dévastatrice. Plongez dans les statistiques tragiques pour mieux comprendre le lourd tribut humain payé pendant ce conflit mondial, alors que des millions de vies ont été sacrifiées pour un monde en quête de paix.            </p>
+            <a href="#bilan" > VOIR LE BILAN</a>
         </div>
     </section>
 
 
     <section id="bilan">
         <div class="txtbilan">
-            <h3>Bilan <br> <span class="white"> World War </span> </h3>
+            <div class="bilanBarre">
+                <h3>Bilan</h3>
+                <div class="barre1"></div>
+            </div>
+               <h3><span class="white"> World War </span> </h3>
         </div>
         <div class="compteur">
             <form>
                 <label id="trucDrole"></label>
                 <input type="number" name="numberJusteMort" id="numberJusteMort" step="1" required autocomplete="off">
-                <p id="formTXT">Please estimate the number of deaths you think occurred during World War I.</p>
-                <input type="submit" id="JustePrixSubmit" value="CHECK">
+                <p id="formTXT">Veuillez estimer le nombre de morts que vous pensez avoir eu lieu pendant la Première Guerre mondiale.</p>
+                <input type="submit" id="JustePrixSubmit" value="VERIFIER">
             </form>
-            <a href="#Fondcarte" id="SeeMore" > SEE MORE</a>
+            <a href="#Fondcarte" id="SeeMore" > EN SAVOIR PLUS</a>
 
         </div>
 
@@ -56,7 +60,7 @@
 
     <section id="Fondcarte" >
         <div id="carte">
-            <svg width="949" height="764" viewBox="0 0 949 764" fill="none" xmlns="http://www.w3.org/2000/svg"  >
+            <svg id="svgCarte" width="949" height="764" viewBox="0 0 949 764" fill="none" xmlns="http://www.w3.org/2000/svg"  >
                 <g clip-path="url(#clip0_16_10771)">
                 <path class="selectablePath" id="RS" d="M510.695 626.705L507.339 628.788L505.817 630.475L504.194 632.558L502.554 632.68L500.668 632.816L500.444 632.595L498.804 630.997H498.786L497.179 633.077L495.676 634.884L492.168 635.145L488.81 637.345L487.17 637.469L483.797 637.711L483.534 637.469L481.799 635.908L481.797 636.026L481.928 637.85L480.308 637.972L478.654 639.678L478.538 639.794L476.687 638.23L476.443 634.605L474.687 634.746L474.46 631.201L474.33 629.398L472.597 627.698L472.351 624.054L472.218 622.251L472.318 622.117L473.726 620.307L477.914 615.888L478.826 617.708L482.637 614.825L487.91 615.611L493.885 613.071L495.899 613.115L497.479 611.369L501.249 613.032L503.002 614.614L504.87 616.295L506.605 617.875L508.47 619.577L508.584 621.378L508.716 623.202L507.095 625.144L510.224 626.497L510.412 626.581L510.695 626.705Z" fill="#303030"/>
                 <path class="selectablePath" id="RS" d="M503.187 591.239L501.567 593.043L501.681 594.864L498.288 596.947L498.401 598.748L498.629 602.274L497.62 602.351L496.896 602.415L496.91 602.653L497.142 606.04L497.239 607.723L497.483 611.367L495.903 613.112L493.887 613.069L487.915 615.609L482.641 614.823L484.097 611.71L484.202 606.807L484.26 604.158L478.211 602.247L476.055 599.036L472.018 596.475L470.916 599.081L468.056 602.816C468.056 602.816 462.04 602.032 461.244 601.877C460.466 601.722 459.163 599.499 459.163 599.499L455.935 598.262L450.064 592.577L454.804 591.651L449.439 583.623L455.002 582.419L446.768 575.161L452.833 565.72L446.954 566.601L447.847 561.34L452.151 560.285L462.619 560.176L464.536 567.416L467.249 566.03L470.202 569.397L478.995 565.85L480.519 565.745L483.092 565.544L484.006 565.484L484.312 565.451L485.76 565.344L487.623 567.164L490.981 568.502L491.246 568.586L492.75 566.8L495.897 564.732L496.11 564.579L498.126 566.403L496.356 568.222L496.488 570.026L498.356 569.889L500.242 573.293L499.636 574.013L496.96 577.198L495.339 579.139L494.615 579.183L493.585 579.259L493.713 579.499L495.564 582.783L495.812 586.288L497.678 587.99L497.791 589.812L499.679 589.655L501.319 589.533L503.187 591.239Z" fill="#303030"/>
@@ -162,20 +166,23 @@
 
     <section id="graphique">
         <div class="txtGraphique">
-            <h3 class="red">GRAPH</h3>
-            <h4>WW1</h4>
-            <p id="formTXT">Chaque personnage symbolise individuellement 140 000 personne. Chaque pixel de ce graphique reflète une vie perdue, soulignant ainsi l'ampleur personnelle et humaine de ce conflit historique dévastateur.</p>
+            <div class="titregraph">
+                <h3 class="red">GRAPH</h3> <div class="barre2"></div>
+            </div>
+            <h4>Graphique sur la World War 1</h4>
+            <p id="TXTgraph">Chaque personnage symbolise individuellement 140 000 personne. Chaque pixel de ce graphique reflète une vie perdue, soulignant ainsi l'ampleur personnelle et humaine de ce conflit historique dévastateur.</p>
         </div>
-        <div id="graph1" class="graph"></div>
+        <div class="graphCenter">
+            <div id="graph1" class="graph"></div>
+        </div>
     </section>
-
 
     <section class="legislation">
         <div class="TXTlegislation">
-            <h3>ABOUT OUR STUDENTS PROJECT</h3>
-            <p>Welcome to our student project dedicated to visualizing data on the casualties of World War I and World War II. We are a passionate team of students on a mission to honor the memory of those who sacrificed their lives during these pivotal moments in history.
+            <h3>À PROPOS DE NOTRE PROJET ÉTUDIANTS</h3>
+            <p>Bienvenue dans notre projet étudiant dédié à la visualisation des données sur les victimes de la Première Guerre mondiale et de la Seconde Guerre mondiale. Nous sommes une équipe passionnée d’étudiants en mission pour honorer la mémoire de ceux qui ont sacrifié leur vie pendant ces moments charnières de l’histoire.
             </p>
-            <h3>LEGISLATION ON PERSONAL DATA</h3>
+            <h3>LEGISLATION SUR LES DONNEES PERSONELLES</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut </p>
         </div>
     </section>

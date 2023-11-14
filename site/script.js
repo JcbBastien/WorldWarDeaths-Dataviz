@@ -27,7 +27,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
     //Retire le submit & la case puis ajoute un label
     document.getElementById("numberJusteMort").remove();
     document.getElementById("JustePrixSubmit").remove();
-    document.getElementById("formTXT").replaceChildren("Here is the real number of deaths in the first world wars");
+    document.getElementById("formTXT").replaceChildren("Voici le nombre réel de morts dans les premières guerres mondiales");
     document.getElementById("SeeMore").style.display='flex'
 
     document.getElementById("trucDrole").innerHTML = inputNumber.toString();
@@ -84,7 +84,7 @@ svg.querySelectorAll('path').forEach(path => {
         openModal()
         document.querySelector('#title').textContent = countryData.country;
         let dataDeathsProcessed = formatNumberWithSpaces(countryData.deaths);
-        document.querySelector('#modal-body').textContent ="NUMBER OF DEATHS : " + dataDeathsProcessed
+        document.querySelector('#modal-body').textContent ="NOMBRE DE MORTS : " + dataDeathsProcessed
    });
   }else{
     path.classList.remove("selectablePath")

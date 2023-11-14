@@ -105,9 +105,6 @@ sortedWW1.forEach((element, i) => {
         <div class=graphLine></div> 
 
         <h2>` + element.country + `</h2>
-        <p>` + element.deaths + ` morts</p>
-        <p>` + element.civil + ` civil</p>
-        <p>` + element.military + ` militaire</p>
     </div>`;
 
       document.getElementById("graph1").innerHTML += WW1GraphTemplate;
@@ -239,3 +236,13 @@ sortedWW2.forEach((element, i) => {
     }
     i++;
 });
+
+function formatNumberWithSpaces(number) {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+
+let eachDeathInfo = formatNumberWithSpaces(Math.round(sortedWW1[0].deaths/140));
+
+document.getElementById("TXTgraph").innerHTML = `Chaque personnage symbolise environ `+ eachDeathInfo +` personnes. Chaque pixel de ce graphique reflète une vie perdue, soulignant ainsi l'ampleur personnelle et humaine de ce conflit historique dévastateur.`
+
+
