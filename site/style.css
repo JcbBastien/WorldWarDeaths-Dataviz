@@ -31,6 +31,7 @@ html {
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Quantico&family=Raleway:wght@700&display=swap');
 
+
 body{
     margin: 0;
     color: white;
@@ -79,7 +80,6 @@ h1{
 .perso{
     position: absolute;
     width: 100%;
-
 }
 
 /* BUTTON */
@@ -129,11 +129,12 @@ a:hover {
 
 /* 3eme page WW2 */
 
-#WW2{
+#WW2 {
     background-image: linear-gradient(0deg, rgba(25,28,27,1) 1%, rgba(0,0,0,0) 50%, rgba(25,28,27,1) 99%), url(img/aboutWW2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     scroll-snap-align: start;
@@ -164,17 +165,23 @@ a:hover {
 
 #carte{
     background-image: url(img/carte.png);
-    width: 70%;
+    max-width: 70%;
     background-repeat: no-repeat;
     background-size: contain;
     margin-top: 60px;
 }
 
-#svgCarte{
-    width: 75%;
-    margin-left: 150px;
-    margin-top: -30px;
-    }
+#carte h3 {
+    margin: 30px 0px 0px 40px;
+    position: absolute;
+    width: 28%;
+    font-size: 3rem;
+}
+
+#svgCarte {
+    max-width: 70%; /* Assurez-vous que le SVG ne dépasse pas la largeur de l'élément parent */
+    margin-left: 200px;
+}
 
 .selectablePath:hover{
     fill: #944141;
@@ -209,8 +216,8 @@ a:hover {
   
   #modal.active {
     transform: translate(-50%, -50%) scale(1);
-
   }
+
   
   #title {
     font-size: 1.75rem;
@@ -223,7 +230,6 @@ a:hover {
     margin-left: 55px;
     margin-top: -5px;
   }
-
 /*BILAN */
 
 #bilan{
@@ -395,13 +401,12 @@ input::-o-outer-spin-button {
 
 #graphique p {
     margin-bottom: 35px;
-    margin-top: 0;
 }
 
 .graph{
     display: flex;
     overflow: auto;
-    width: 60vw;
+    width: 65vw;
     align-items: flex-end;
 }
 
@@ -415,7 +420,7 @@ input::-o-outer-spin-button {
 .graphCenter{
     display: flex;
     justify-content: center;
-    margin-top: -60px;
+    margin-top: -30px;
 }
 
 .graphCivilianColor{
@@ -446,3 +451,74 @@ input::-o-outer-spin-button {
     flex-direction: column;
     align-items: flex-start;
 }
+
+/*responsive*/
+
+@media screen and (max-width: 1024px) {
+    #accueil{
+        display: flex;
+        justify-content: center;
+        background-image: linear-gradient(0deg, rgba(25,28,27,1) 5%, rgba(0,0,0,0) 100%), url(img/homepage.jpg);
+        background-size: cover;
+        height: 50vh;
+        width: 100%;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        -moz-scroll-snap-align: start;
+        -moz-scroll-snap-stop: always;
+
+    }
+
+    h1 {
+        font-family: 'bobbinsbold', sans-serif;
+        font-size: 11.2em;
+        margin-top: 50px;
+    }
+
+    .perso{
+        display: none;
+    }
+
+    #WW1{
+        background-image:linear-gradient(0deg, rgba(25,28,27,1) 2%, rgba(0,0,0,0) 50%, rgba(25,28,27,1) 98%), url(img/aboutWW1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        -moz-scroll-snap-align: start;
+        -moz-scroll-snap-stop: always;
+    }
+
+    #WW2{
+        background-image: linear-gradient(0deg, rgba(25,28,27,1) 1%, rgba(0,0,0,0) 50%, rgba(25,28,27,1) 99%), url(img/aboutWW2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        -moz-scroll-snap-align: start;
+        -moz-scroll-snap-stop: always;
+    }
+
+    #svgCarte{
+    width: 75%;
+    margin-left: 100px;
+    margin-top: -153px;
+        }
+
+    #carte h3 {
+            margin: 30px 0px 0px 40px;
+            position: absolute;
+            width: 28%;
+            font-size: 1.75rem;
+        }
+
+    }

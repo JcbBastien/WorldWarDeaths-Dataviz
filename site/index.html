@@ -8,6 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="script.js" defer type="module"></script>
     <script src="graph.js" type="module" defer></script> 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <section id="accueil">
@@ -20,7 +22,7 @@
     </section>
 
     <section id="WW1">
-        <div class="TXTWW1">
+        <div class="TXTWW1" data-aos="fade-left">
             <h2> ABOUT <span class="red"> WWI</span></h2>
             <p>Bienvenue sur notre site dédié à l’histoire de la Première Guerre mondiale. Ici, nous vous invitons à explorer les chiffres poignants qui reflètent l’ampleur de cette guerre dévastatrice. Plongez dans les statistiques tragiques pour mieux comprendre le lourd tribut humain payé pendant ce conflit mondial, alors que des millions de vies ont été sacrifiées pour un monde en quête de paix.            </p>
             <a href="#bilan" > VOIR LE BILAN</a>
@@ -28,7 +30,7 @@
     </section>
 
     <section id="WW2">
-        <div class="TXTWW2">
+        <div class="TXTWW2" data-aos="fade-right">
             <h2> ABOUT <span class="red"> WWII</span> </h2>
             <p>Ici, nous vous invitons à explorer les chiffres poignants de la seconde guerre mondiale qui reflètent l’ampleur de cette guerre dévastatrice. Plongez dans les statistiques tragiques pour mieux comprendre le lourd tribut humain payé pendant ce conflit mondial, alors que des millions de vies ont été sacrifiées pour un monde en quête de paix.            </p>
             <a href="#bilan" > VOIR LE BILAN</a>
@@ -44,7 +46,7 @@
             </div>
                <h3><span class="white"> World War </span> </h3>
         </div>
-        <div class="compteur">
+        <div class="compteur" data-aos="zoom-in">
             <form>
                 <label id="trucDrole"></label>
                 <input type="number" name="numberJusteMort" id="numberJusteMort" step="1" required autocomplete="off">
@@ -57,6 +59,7 @@
 
     <section id="Fondcarte" >
         <div id="carte">
+            <h3>Representation géographique du nombres de morts par pays</h3>
             <svg id="svgCarte" width="949" height="764" viewBox="0 0 949 764" fill="none" xmlns="http://www.w3.org/2000/svg"  >
                 <g clip-path="url(#clip0_16_10771)">
                 <path class="selectablePath" id="RS" d="M510.695 626.705L507.339 628.788L505.817 630.475L504.194 632.558L502.554 632.68L500.668 632.816L500.444 632.595L498.804 630.997H498.786L497.179 633.077L495.676 634.884L492.168 635.145L488.81 637.345L487.17 637.469L483.797 637.711L483.534 637.469L481.799 635.908L481.797 636.026L481.928 637.85L480.308 637.972L478.654 639.678L478.538 639.794L476.687 638.23L476.443 634.605L474.687 634.746L474.46 631.201L474.33 629.398L472.597 627.698L472.351 624.054L472.218 622.251L472.318 622.117L473.726 620.307L477.914 615.888L478.826 617.708L482.637 614.825L487.91 615.611L493.885 613.071L495.899 613.115L497.479 611.369L501.249 613.032L503.002 614.614L504.87 616.295L506.605 617.875L508.47 619.577L508.584 621.378L508.716 623.202L507.095 625.144L510.224 626.497L510.412 626.581L510.695 626.705Z" fill="#303030"/>
@@ -184,5 +187,8 @@
         </div>
     </section>
 
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
