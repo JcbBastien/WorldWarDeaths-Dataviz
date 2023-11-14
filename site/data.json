@@ -6,6 +6,7 @@
         "military": 61928,
         "civil": 0,
         "abr":"AU"
+        
       },
       {
         "country": "Belgique",
@@ -177,7 +178,8 @@
         "deaths": 11900,
         "military": 11900,
         "civil": 0,
-        "jews": 0
+        "jews": 0,
+        "abr":"ZA"
       },
       {
         "country": "Albanie",
