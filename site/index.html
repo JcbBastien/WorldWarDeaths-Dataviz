@@ -6,7 +6,8 @@
     <title>DATAVIZ</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-    <script src="script.js" defer type="module"></script>    
+    <script src="script.js" defer type="module"></script>
+    <script src="graph.js" type="module" defer></script> 
 </head>
 <body>
     <section class="accueil">
@@ -149,17 +150,26 @@
                 </clipPath>
                 </defs>
                 </svg>
-  <button id="modal">
-    <div class="country">
-      <div id="title"></div>
-    </div>
-    <div id="modal-body">
-    </div>
-</button>
-
-
-        </div>
+            <button id="modal">
+                <div class="country">
+                <div id="title"></div>
+                </div>
+                <div id="modal-body">
+                </div>
+            </button>
+                    </div>
     </section>
+
+    <section id="graphique">
+        <div class="txtGraphique">
+            <h3 class="red">GRAPH</h3>
+            <h4>WW1</h4>
+            <p id="formTXT">Chaque personnage symbolise individuellement 140 000 personne. Chaque pixel de ce graphique reflète une vie perdue, soulignant ainsi l'ampleur personnelle et humaine de ce conflit historique dévastateur.</p>
+        </div>
+        <div id="graph1" class="graph"></div>
+    </section>
+
+
     <section class="legislation">
         <div class="TXTlegislation">
             <h3>ABOUT OUR STUDENTS PROJECT</h3>
@@ -168,8 +178,10 @@
             <h3>LEGISLATION ON PERSONAL DATA</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut </p>
         </div>
-
     </section>
+
+    <section id="graph2" class="graph"></section>
+
 
 </body>
 </html>

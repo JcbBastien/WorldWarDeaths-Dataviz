@@ -90,11 +90,11 @@ svg.querySelectorAll('path').forEach(path => {
     path.classList.remove("selectablePath")
     path.classList.add("unselectablePath")
   }
-
-  
-  
   
  });
+ 
+
+ 
 
  
 

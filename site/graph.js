@@ -1,5 +1,5 @@
 // Récupère les données dans le tableau de données
-const response = await fetch("http://localhost:5500/bastientests/graph/data.json")
+const response = await fetch("http://localhost:5500/site/data.json")
 const jsonData = await response.json()
 
 
