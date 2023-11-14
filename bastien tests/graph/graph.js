@@ -33,28 +33,6 @@ for (let i = 0; i < 2; i++) {
     });
 }
 
-
-
-// Affiche/cache les graphiques
-function toggleGraphs(){
-    document.getElementById("graph1").classList.toggle("hidden")
-    document.getElementById("graph2").classList.toggle("hidden")
-}
-
-let WWNumber = 0
-
-document.getElementById("wwx").addEventListener("click", function () {
-    if(WWNumber == 0){
-        WWNumber = 1
-        toggleGraphs()
-    }else{
-        WWNumber = 0
-        toggleGraphs()
-    }
-});
-
-
-
 // Trie par nombre de morts
 const sortedWW1 = jsonData.WW1.sort(function(a,b){
     return b.deaths - a.deaths;
