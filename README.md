@@ -14,8 +14,8 @@ Les informations disponibles sur ce site sont les suivantes :
 - JS
 
 # Auteurs
-- Bastien Jacob
-- Hugo Lecerf
-- Vincent Gilbert
+- [Bastien Jacob](https://github.com/JcbBastien)
+- [Hugo Lecerf](https://github.com/HugoLcrf)
+- [Vincent Gilbert](https://github.com/vincentgilbert21)
 
 *Toutes les données utilisées et les informations légales sont disponibles sur le site dans les mentions légales.*
