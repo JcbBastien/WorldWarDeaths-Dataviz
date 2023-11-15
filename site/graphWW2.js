@@ -104,8 +104,7 @@ sortedWW2.forEach((element, i) => {
 
 
         <h2>` + element.country + `</h2>
-        <p>` + eachCivilDeath + ` civil / ` + eachMilitaryDeath + ` militaire</p></div>`;
-        
+        <p>` + eachCivilDeath + ` civil / ` + eachMilitaryDeath + ` militaire <br> ` + element.jews + ` juif </p>`        
 
       document.getElementById("graph1").innerHTML += WW2GraphTemplate;
 
