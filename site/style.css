@@ -28,6 +28,18 @@ html {
     src: url("Fonts/Bobbin-BoldCyrillic.woff2")
 }
 
+@font-face {
+    font-family: "Ando";
+    src: url("Fonts/Ando-Bold.woff");
+    src: url("Fonts/Ando-Bold.woff2")
+}
+
+@font-face {
+    font-family: "AndoL";
+    src: url("Fonts/Ando-Light.woff");
+    src: url("Fonts/AndoLight.woff")
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Quantico&family=Raleway:wght@700&display=swap');
 
@@ -390,7 +402,9 @@ input::-o-outer-spin-button {
 
 
 #graphique h2{
-    font-size: 2rem;
+    font-family: "Ando";
+    text-transform: uppercase;
+    font-size: 1.3rem;
     margin-bottom: 0;
 }
 
@@ -400,6 +414,8 @@ input::-o-outer-spin-button {
 }
 
 #graphique p {
+    font-family: "AndoL";
+    text-transform: uppercase;
     margin-bottom: 35px;
 }
 
