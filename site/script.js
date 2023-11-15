@@ -1,5 +1,7 @@
+
+
 // Récupère les données dans le tableau de données
-  const response = await fetch("http://localhost:5500/site/data.json")
+  const response = await fetch("data.json")
   const jsonData = await response.json();
 
 document.getElementById('SeeMore').style.display = 'none';
@@ -8,7 +10,6 @@ document.getElementById('SeeMore').style.display = 'none';
 function formatNumberWithSpaces(number) {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
-
 
 //JustePrix morbide
 document.querySelector("form").addEventListener("submit", (event) => {
@@ -55,8 +56,8 @@ const modal = document.getElementById('modal')
 //Permet d'activer la Popup et de la positionner a l'emplacement cliquer
 function openModal(){
   modal.classList.add('active')
-  const x = event.clientX + 10 + 'px';
-  const y = event.clientY - 60 + 'px';
+  const x = event.clientX - 250 + 'px';
+  const y = event.clientY - 100 + 'px';
   modal.style.left = x;
   modal.style.top = y;
 }

@@ -67,10 +67,6 @@ h2{
     background-image: linear-gradient(0deg, rgba(25,28,27,1) 5%, rgba(0,0,0,0) 100%), url(img/homepage.jpg);
     background-size: cover;
     height: 100vh;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    -moz-scroll-snap-align: start;
-    -moz-scroll-snap-stop: always;
 }
 
 /* ACCUEIL */
@@ -127,10 +123,6 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    -moz-scroll-snap-align: start;
-    -moz-scroll-snap-stop: always;
 }
 
 .TXTWW1{
@@ -149,10 +141,6 @@ a:hover {
     width: 100%;
     display: flex;
     align-items: center;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    -moz-scroll-snap-align: start;
-    -moz-scroll-snap-stop: always;
 }
 
 .TXTWW2{
@@ -169,10 +157,6 @@ a:hover {
     background-image: linear-gradient(0deg, rgba(25,28,27,1) 1%, rgba(0,0,0,0) 50%, rgba(25,28,27,1) 99%), url(img/Fondcarte1.jpg);
     background-position: center ;
     height: 100vh;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    -moz-scroll-snap-align: start;
-    -moz-scroll-snap-stop: always;
 }
 
 #carte{
@@ -181,13 +165,18 @@ a:hover {
     background-repeat: no-repeat;
     background-size: contain;
     margin-top: 60px;
+    position: relative;
 }
 
 #carte h3 {
-    margin: 30px 0px 0px 40px;
+    margin: 50px 0px 0px 40px;
     position: absolute;
-    width: 28%;
-    font-size: 3rem;
+    width: 38%;
+    font-size: 2.5rem;
+    font-family: "Ando";
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    color: #9E0505;
 }
 
 #svgCarte {
@@ -208,13 +197,13 @@ a:hover {
 /*POPUP*/
 
   #modal {
-    position: fixed;
+    position: absolute;
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
     background-image: url(img/Papier.png);
     background-repeat: no-repeat;
-    width: 25%;
-    height: 15%;
+    width: 30%;
+    height: 20%;
     color: black;
     font-family: 'Bobbinsbold';
     font-size: 1.5rem;
@@ -249,10 +238,7 @@ a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    -moz-scroll-snap-align: start;
-    -moz-scroll-snap-stop: always;
+
 }
 
 .txtbilan{
@@ -372,13 +358,6 @@ input::-o-outer-spin-button {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    -moz-scroll-snap-align: start;
-    -moz-scroll-snap-stop: always;scroll-snap-align: start;
-    scroll-snap-stop: always;
-    -moz-scroll-snap-align: start;
-    -moz-scroll-snap-stop: always;
 }
 
 /*TEXTE du graphique */
@@ -439,6 +418,11 @@ input::-o-outer-spin-button {
     margin-top: -30px;
 }
 
+.graph p{
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+}
+
 .graphCivilianColor{
     fill:rgba(255, 255, 255, 0.781);
 }
@@ -454,10 +438,6 @@ input::-o-outer-spin-button {
     background-image:linear-gradient(0deg, rgba(25,28,27,1) 2%, rgba(0,0,0,0) 50%, rgba(25,28,27,1) 98%), url(img/legislation.jpg);
     background-position: center ;
     height: 100vh;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    -moz-scroll-snap-align: start;
-    -moz-scroll-snap-stop: always;
 }
 .TXTlegislation{
     margin-left: 100px;
@@ -487,10 +467,6 @@ input::-o-outer-spin-button {
         background-size: cover;
         height: 50vh;
         width: 100%;
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-        -moz-scroll-snap-align: start;
-        -moz-scroll-snap-stop: always;
 
     }
 
@@ -513,10 +489,6 @@ input::-o-outer-spin-button {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-        -moz-scroll-snap-align: start;
-        -moz-scroll-snap-stop: always;
     }
 
     #WW2{
@@ -527,10 +499,6 @@ input::-o-outer-spin-button {
         width: 100%;
         display: flex;
         align-items: center;
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-        -moz-scroll-snap-align: start;
-        -moz-scroll-snap-stop: always;
     }
 
     #svgCarte{

@@ -1,5 +1,5 @@
 // Récupère les données dans le tableau de données
-const response = await fetch("http://localhost:5500/site/data.json")
+const response = await fetch("data.json")
 const jsonData = await response.json()
 
 
@@ -82,11 +82,18 @@ let militaryVar = `<g id="graphMilitary" transform="scale(0.2265) translate(131.
 </g>
 </g>`
 
+function formatNumberWithSpaces(number) {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
 
 
 // Deux codes pour générer les graphiques des guerres car la 2e guerre a des valeurs supplémentaire.
 // <rect x="10" y="10" width="230" height="380" fill="#cacaca"/>
 sortedWW1.forEach((element, i) => {
+    let eachCivilDeath = formatNumberWithSpaces(element.civil);
+    let eachMilitaryDeath = formatNumberWithSpaces(element.military);
+
+
     let WW1GraphTemplate = `
     <div class="graphContainer">
         <svg id="graph1` + (i+1) + `Content" width="250" height="400" xmlns="http://www.w3.org/2000/svg">
@@ -97,8 +104,8 @@ sortedWW1.forEach((element, i) => {
 
 
         <h2>` + element.country + `</h2>
-        <p>` + element.deaths + ` morts</p>
-    </div>`;
+        <p>` + eachCivilDeath + ` civil / ` + eachMilitaryDeath + ` militaire</p></div>`;
+        
 
       document.getElementById("graph1").innerHTML += WW1GraphTemplate;
 
@@ -157,9 +164,7 @@ sortedWW1.forEach((element, i) => {
       i++;
 });
 
-function formatNumberWithSpaces(number) {
-  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-}
+
 
 let eachDeathInfo = formatNumberWithSpaces(Math.round(sortedWW1[0].deaths/140));
 
