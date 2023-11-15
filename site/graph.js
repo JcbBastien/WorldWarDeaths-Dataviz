@@ -168,6 +168,8 @@ sortedWW1.forEach((element, i) => {
 
 let eachDeathInfo = formatNumberWithSpaces(Math.round(sortedWW1[0].deaths/140));
 
-document.getElementById("TXTgraph").innerHTML = `Chaque personnage symbolise environ `+ eachDeathInfo+` personnes. Chaque pixel de ce graphique reflète une vie perdue, soulignant ainsi l'ampleur personnelle et humaine de ce conflit historique dévastateur.`
+document.getElementById("TXTgraph").innerHTML = `Explorez l'impact humain dévastateur de la Première Guerre mondiale à travers notre graphique. Chaque personnage représenté équivaut à `+ eachDeathInfo+`  de vies perdues pendant ce conflit historique. Chaque personnage de ce graphique reflète une vie perdue, soulignant ainsi l'ampleur personnelle et humaine de ce conflit historique dévastateur. 
+ <br> <img class="militarySVG" src="img/military.svg" alt=""> = Nombre de militaires morts <img class="civilianSVG" src="img/civilian.svg" alt=""> = Nombre de civils morts </br>
+`
 
 
