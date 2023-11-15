@@ -470,6 +470,15 @@ input::-o-outer-spin-button {
 
 /*responsive*/
 
+@media screen and (max-width: 1440px) {
+
+    #svgCarte{
+        width: 75%;
+        margin-left: 100px;
+        margin-top: -40px;
+            }
+}
+
 @media screen and (max-width: 1024px) {
     #accueil{
         display: flex;
@@ -536,5 +545,4 @@ input::-o-outer-spin-button {
             width: 28%;
             font-size: 1.75rem;
         }
-
     }
