@@ -92,6 +92,8 @@ function formatNumberWithSpaces(number) {
 sortedWW2.forEach((element, i) => {
     let eachCivilDeath = formatNumberWithSpaces(element.civil);
     let eachMilitaryDeath = formatNumberWithSpaces(element.military);
+    let eachJewDeath = formatNumberWithSpaces(element.jews);
+
 
 
     let WW2GraphTemplate = `
@@ -104,7 +106,7 @@ sortedWW2.forEach((element, i) => {
 
 
         <h2>` + element.country + `</h2>
-        <p>` + eachCivilDeath + ` civil / ` + eachMilitaryDeath + ` militaire <br> ` + element.jews + ` juif </p>`        
+        <p>` + eachCivilDeath + ` civil / ` + eachMilitaryDeath + ` militaire <br> dont ` + eachJewDeath + ` juif </p>`        
 
       document.getElementById("graph1").innerHTML += WW2GraphTemplate;
 
