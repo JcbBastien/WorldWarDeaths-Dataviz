@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DATAVIZ - WW2</title>
+    <link rel="icon" href="img/FavIcon/favicon-16x16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/FavIcon/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="scriptWW2.js" defer type="module"></script>
@@ -24,7 +26,7 @@
         <div class="TXTWW2" data-aos="fade-right">
             <h2> ABOUT <span class="red"> WWII</span> </h2>
             <p>Bienvenue sur notre page dédiée à la Seconde Guerre mondiale. Préparez-vous à plonger dans l'histoire avec un regard détaillé sur les pertes humaines pendant ce conflit mondial. À travers des représentations visuelles poignantes, nous mettons en lumière les tragédies vécues par des millions de personnes, que ce soit du côté militaire ou civil. Explorez les chiffres et les faits marquants qui témoignent de l'impact dévastateur de la Seconde Guerre mondiale sur la vie de nombreuses familles et sur le monde dans son ensemble.</p>
-            <a href="#bilan" alt="voir le bilan des dèces durant la seconde guerre mondial" > VOIR LE BILAN</a>
+            <a href="#bilan" alt="voir le bilan des dèces durant la seconde guerre mondial" class="button" > VOIR LE BILAN</a>
         </div>
     </section>
 
@@ -32,7 +34,7 @@
         <div class="TXTWW1" data-aos="fade-left" >
             <h2> ABOUT <span class="red"> WWI</span></h2>
             <p>Plongez dans l'histoire déchirante de la Première Guerre mondiale, un conflit qui a bouleversé le destin de millions de personnes à travers le monde. Si vous aspirez à comprendre les détails poignants des pertes humaines subies pendant cette période cruciale de l'histoire, nous vous invitons à cliquer sur le bouton ci-dessous. Ensemble, honorons la mémoire de ceux qui ont vécu ces moments difficiles            </p>
-            <a href="index.html" alt="aller vers la première guerre mondiale" > VERS WW1</a>
+            <a href="index.html" alt="aller vers la première guerre mondiale" class="button" > VERS WW1</a>
         </div>
     </section>
 
@@ -53,7 +55,7 @@
                 <p id="formTXT">Veuillez estimer le nombre de morts que vous pensez avoir eu lieu pendant la Première Guerre mondiale.</p>
                 <input type="submit" id="JustePrixSubmit" value="VERIFIER">
             </form>
-            <a href="#Fondcarte" id="SeeMore" alt="en savoir plus" > EN SAVOIR PLUS</a>
+            <a href="#Fondcarte" id="SeeMore" alt="en savoir plus" class="button" > EN SAVOIR PLUS</a>
         </div>
     </section>
 
@@ -180,11 +182,23 @@
 
     <section class="legislation">
         <div class="TXTlegislation">
-            <h3>À PROPOS DE NOTRE PROJET ÉTUDIANTS</h3>
-            <p>Bienvenue dans notre projet étudiant dédié à la visualisation des données sur les victimes de la Première Guerre mondiale et de la Seconde Guerre mondiale. Nous sommes une équipe passionnée d’étudiants en mission pour honorer la mémoire de ceux qui ont sacrifié leur vie pendant ces moments charnières de l’histoire.
-            </p>
-            <h3>LEGISLATION SUR LES DONNEES PERSONELLES</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut </p>
+            <div class="Editeur" >
+                <h3>Editeur</h3>
+                <p>Un projet etudiant fait par Vincent Gilbert, Bastien Jacob et Hugo Lecerf </p>
+            </div>
+            <div class="dataSources">
+                <h3>DATA SOURCES & CREDITS</h3>
+                <ul>
+                    <li>Première Guerre Mondial - <a href="https://fr.wikipedia.org/wiki/Pertes_humaines_de_la_Premi%C3%A8re_Guerre_mondiale" target="_blank" style="transition: all 0.2s ease 0s; opacity: 1;">Nombre de décès militaires et civils pendant la Première Guerre mondiale</a></li>
+                    <li>Seconde Guerre Mondial - <a href="https://fr.wikipedia.org/wiki/Pertes_humaines_pendant_la_Seconde_Guerre_mondiale" target="_blank" style="transition: all 0.2s ease 0s; opacity: 1;">Nombre de décès militaires et civils pendant la Seconde Guerre mondiale</a></li>
+                </ul>
+            </div>           
+            <div class="hebergeur">
+                <h3>LEGISLATION SUR LES DONNEES PERSONELLES</h3>
+                <p>Hôte : github.com - 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis
+                
+                    Ce site constitue un travail d’esprit au sens du Code de la Propriété Intellectuelle et restera dans le cadre de projets universitaires : aucun média ne sera utilisé à des fins commerciales.</p>
+            </div>
         </div>
     </section>
 

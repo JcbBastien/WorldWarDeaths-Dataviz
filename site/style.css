@@ -18,11 +18,6 @@ html {
 
 
 @font-face {
-    font-family: "grunge";
-    src: url("Fonts/WarEliteGrunge.ttf");
-}
-
-@font-face {
     font-family: "bobbinsbold";
     src: url("Fonts/Bobbin-BoldCyrillic.woff");
     src: url("Fonts/Bobbin-BoldCyrillic.woff2")
@@ -40,7 +35,6 @@ html {
     src: url("Fonts/AndoLight.woff")
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Quantico&family=Raleway:wght@700&display=swap');
 
 
@@ -92,7 +86,7 @@ h1{
 
 /* BUTTON */
 
-a{
+.button{
     margin-top: 40px;
     background: rgba(0, 0, 0, 0);
     border-radius: 15px;
@@ -108,11 +102,21 @@ a{
     transition: transform 0.3s ease;
 }
 
+
+
+.TXTlegislation a {
+    margin-top: 0;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 0.8em;
+    width: 100%;
+    height: 40px;
+    text-decoration: none;
+}
+
 a:hover {
     transform: scale(1.2); /* Grossit le bouton de 10% au survol */
 }
-
-
 /* 2EME PAGE WW1 */
 
 #WW1{
@@ -164,7 +168,7 @@ a:hover {
     max-width: 70%;
     background-repeat: no-repeat;
     background-size: contain;
-    margin-top: 3Première Guerre mondiale0px;
+    margin-top: 30px;
     position: relative;
 }
 
@@ -292,22 +296,22 @@ h3{
 form{
     display: flex;
     align-items: center;
-    flex-direction: column; 
-    margin-bottom: 40px;
+    flex-direction: column;
+    margin-top: -50px;
 }
 
 #numberJusteMort{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'ando', sans-serif;
     font-weight: 400;
-    font-size: 9em;
+    font-size: 10.5em;
     color: #9E0505;
     width: 50%;
 }
 
 #trucDrole{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'ando', sans-serif;
     font-weight: 400;
-    font-size: 9em;
+    font-size: 10.5em;
     color: #9E0505;
 }
 
@@ -466,11 +470,28 @@ input::-o-outer-spin-button {
 }
 .TXTlegislation{
     margin-left: 100px;
-    margin-top: 150px;
+    margin-top: 120px;
     width: 60%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.TXTlegislation h3{
+    color: white;
+    font-family: 'ANDO';
+}
+
+.TXTlegislation ul{
+    font-size: 1.2em;
+}
+
+.Editeur h3{
+    text-transform: uppercase;
+}
+
+.dataSources{
+    margin: 30px 0px 40px 0px;
 }
 
 /*responsive*/
