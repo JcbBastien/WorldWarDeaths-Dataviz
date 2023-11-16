@@ -100,7 +100,7 @@ sortedWW2.forEach((element, i) => {
             <defs>` + civilianVar + militaryVar +`</defs>
         </svg>
 
-        <img src="img/drapeauWW2/`+element.abr+`.png">
+        <img alt="" src="img/drapeauWW2/`+element.abr+`.png">
 
 
         <h2>` + element.country + `</h2>
