@@ -1,4 +1,5 @@
 # World War Deaths - Dataviz
+URL du site: https://jcbbastien.github.io/WorldWarDeaths-Dataviz/
 World War Deaths est un projet universitaire qui s'engage à créer une visualisation immersive et informative. 
 Le projet consistait à recueillir des données sur Internet d'un sujet de notre choix et à créer un site permettant de visualiser ces données. Nous avons donc choisi de créer un site sur les pertes humaines pendant les guerres mondiales.
 
