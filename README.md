@@ -20,4 +20,4 @@ Les informations disponibles sur ce site sont les suivantes :
 - [Hugo Lecerf](https://github.com/HugoLcrf)
 - [Vincent Gilbert](https://github.com/vincentgilbert21)
 
-*Toutes les données utilisées et les informations légales sont disponibles sur le site dans les mentions légales.*
+*Toutes les données utilisées et les informations légales sont disponibles sur le site dans les mentions légales et sur [ce lien](https://jcbbastien.github.io/WorldWarDeaths-Dataviz/legal.pdf).*
